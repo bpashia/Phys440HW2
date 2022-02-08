@@ -1,2 +1,2 @@
-# Regular-Bessel-Function-SwiftUI
-Calculates Jx(z), the Bessel function of the first kind.
+# Phys 440 HW 2
+
