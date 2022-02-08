@@ -9,65 +9,38 @@ import XCTest
 
 class Tests_macOS: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
-    func testFirstBessel() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBesselOrderTwo() {
+       
         
         let xValue = 3.14159
         var testValue = 0.0
         let exactValue = -0.304241422390334070012314231310288833541605096519723554605
         
-        testValue = calculateFirstBessel(xValue: xValue)
+        testValue = calculateBesselOrderTwo(xValue: xValue)
         
         
-        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-8, "Print it should have been closer.")
+        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-8, "Not in margin of error")
         
         
     
     }
     
-    func testSecondBessel() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBesselOrderOne() {
+        
         
         let xValue = 3.14159
         var testValue = 0.0
         let exactValue = 0.2846163909175278108223286455901279738072008398586234609975
         
-        testValue = calculateSecondBessel(xValue: xValue)
+        testValue = calculateBesselOrderOne(xValue: xValue)
         
         
-        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-8, "Print it should have been closer.")
-        
-        
-    
+        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-8, Not in margin of error")
     }
     
-    func testBessel() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDownardRecursionBessel() {
+
         
         let xValue = 3.14159
         var testValue = 0.0
@@ -79,14 +52,31 @@ class Tests_macOS: XCTestCase {
         
         
         
-        testValue = calculateDownwardRecursion(xValue: xValue, order: order, start: start)
+        testValue = calculateBesselDownwardRecursion(xValue: xValue, order: order, start: start)
         
         
-        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-15, "Print it should have been closer.")
-
-        
+        XCTAssertEqual(testValue, exactValue, accuracy: 1.0e-15, "Not in margin of error")
     
     }
+                       
+    func testCalculateRoots(){
+            let a = 1
+            let b = 2
+            let c = 1
+            
+            let expectedResult = -1
+            
+            let calcualtedResult = calculateRoots(a:a,b:b,c:c)
+            
+            for i in calculatedResult{
+                XCTAssertEqual(i, expectedResult, accuracy: 1.0e-2, "Not in margin of error")
+            }
+            
+            
+        }
+                       
+                       
+                      
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

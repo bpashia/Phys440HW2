@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E10A42827A467AA0076F812 /* 2_2BesselFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10A42727A467AA0076F812 /* 2_2BesselFunctions.swift */; };
+		5E10A42A27ACE94C0076F812 /* 2_1_1SubtractiveCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10A42927ACE94C0076F812 /* 2_1_1SubtractiveCancellation.swift */; };
+		5E10A42C27AD661F0076F812 /* 2_3SinApproximation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10A42B27AD661F0076F812 /* 2_3SinApproximation.swift */; };
+		5E10A4E527ADA0CD0076F812 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = 5E10A4E427ADA0CD0076F812 /* CorePlot */; };
 		D252F25E25A5450400388E26 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F25D25A5450400388E26 /* Tests_iOS.swift */; };
 		D252F26925A5450400388E26 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F26825A5450400388E26 /* Tests_macOS.swift */; };
 		D252F26B25A5450400388E26 /* Regular_Bessel_Function_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F24225A5450200388E26 /* Regular_Bessel_Function_SwiftUIApp.swift */; };
@@ -19,10 +23,6 @@
 		D252F28525A5457C00388E26 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28325A5457C00388E26 /* Operators.swift */; };
 		D252F28625A5457C00388E26 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28325A5457C00388E26 /* Operators.swift */; };
 		D252F28725A5457C00388E26 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28325A5457C00388E26 /* Operators.swift */; };
-		D252F28D25A5463200388E26 /* Bessel Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28C25A5463200388E26 /* Bessel Functions.swift */; };
-		D252F28E25A5463200388E26 /* Bessel Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28C25A5463200388E26 /* Bessel Functions.swift */; };
-		D252F28F25A5463200388E26 /* Bessel Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28C25A5463200388E26 /* Bessel Functions.swift */; };
-		D252F29025A5463200388E26 /* Bessel Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F28C25A5463200388E26 /* Bessel Functions.swift */; };
 		D252F2A125A5546C00388E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F24325A5450200388E26 /* ContentView.swift */; };
 		D252F2A625A5546C00388E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F24325A5450200388E26 /* ContentView.swift */; };
 		D252F2AB25A5547000388E26 /* Regular_Bessel_Function_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252F24225A5450200388E26 /* Regular_Bessel_Function_SwiftUIApp.swift */; };
@@ -30,6 +30,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5E10A4D227AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
+		5E10A4D427AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = "UnitTests Mac";
+		};
+		5E10A4D627AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09781A46185200D45436;
+			remoteInfo = "CorePlot iOS";
+		};
+		5E10A4D827AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09821A46185300D45436;
+			remoteInfo = "UnitTests iOS";
+		};
+		5E10A4DA27AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09BA1A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		5E10A4DC27AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09C41A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouchTests";
+		};
+		5E10A4DE27AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6921BC83F2A0091C8F7;
+			remoteInfo = "CorePlot tvOS";
+		};
+		5E10A4E027AD991D0076F812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
+			remoteInfo = "UnitTests tvOS";
+		};
 		D252F25A25A5450400388E26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D252F23D25A5450100388E26 /* Project object */;
@@ -47,12 +103,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E10A42727A467AA0076F812 /* 2_2BesselFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_2BesselFunctions.swift; sourceTree = "<group>"; };
+		5E10A42927ACE94C0076F812 /* 2_1_1SubtractiveCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_1_1SubtractiveCancellation.swift; sourceTree = "<group>"; };
+		5E10A42B27AD661F0076F812 /* 2_3SinApproximation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_3SinApproximation.swift; sourceTree = "<group>"; };
+		5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = "../../../Desktop/core-plot-master 2/framework/CorePlot.xcodeproj"; sourceTree = "<group>"; };
 		D252F24225A5450200388E26 /* Regular_Bessel_Function_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regular_Bessel_Function_SwiftUIApp.swift; sourceTree = "<group>"; };
 		D252F24325A5450200388E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D252F24425A5450400388E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D252F24925A5450400388E26 /* Regular Bessel Function SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Regular Bessel Function SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D252F24925A5450400388E26 /* Phys440HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phys440HW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252F24C25A5450400388E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D252F25125A5450400388E26 /* Regular Bessel Function SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Regular Bessel Function SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D252F25125A5450400388E26 /* Phys440HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phys440HW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252F25325A5450400388E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D252F25425A5450400388E26 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		D252F25925A5450400388E26 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +122,6 @@
 		D252F26825A5450400388E26 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		D252F26A25A5450400388E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D252F28325A5457C00388E26 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		D252F28C25A5463200388E26 /* Bessel Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bessel Functions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E10A4E527ADA0CD0076F812 /* CorePlot in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +157,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E10A4C327AD991D0076F812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E10A4D327AD991D0076F812 /* CorePlot.framework */,
+				5E10A4D527AD991D0076F812 /* UnitTests.xctest */,
+				5E10A4D727AD991D0076F812 /* CorePlot.framework */,
+				5E10A4D927AD991D0076F812 /* UnitTests iOS.xctest */,
+				5E10A4DB27AD991D0076F812 /* libCorePlot-CocoaTouch.a */,
+				5E10A4DD27AD991D0076F812 /* CorePlot-CocoaTouchTests.xctest */,
+				5E10A4DF27AD991D0076F812 /* CorePlot.framework */,
+				5E10A4E127AD991D0076F812 /* UnitTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D252F23C25A5450100388E26 = {
 			isa = PBXGroup;
 			children = (
+				5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */,
 				D252F24125A5450200388E26 /* Shared */,
 				D252F24B25A5450400388E26 /* iOS */,
 				D252F25225A5450400388E26 /* macOS */,
@@ -115,8 +191,10 @@
 				D252F24225A5450200388E26 /* Regular_Bessel_Function_SwiftUIApp.swift */,
 				D252F24325A5450200388E26 /* ContentView.swift */,
 				D252F28325A5457C00388E26 /* Operators.swift */,
-				D252F28C25A5463200388E26 /* Bessel Functions.swift */,
 				D252F24425A5450400388E26 /* Assets.xcassets */,
+				5E10A42727A467AA0076F812 /* 2_2BesselFunctions.swift */,
+				5E10A42927ACE94C0076F812 /* 2_1_1SubtractiveCancellation.swift */,
+				5E10A42B27AD661F0076F812 /* 2_3SinApproximation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -124,8 +202,8 @@
 		D252F24A25A5450400388E26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D252F24925A5450400388E26 /* Regular Bessel Function SwiftUI.app */,
-				D252F25125A5450400388E26 /* Regular Bessel Function SwiftUI.app */,
+				D252F24925A5450400388E26 /* Phys440HW2.app */,
+				D252F25125A5450400388E26 /* Phys440HW2.app */,
 				D252F25925A5450400388E26 /* Tests iOS.xctest */,
 				D252F26425A5450400388E26 /* Tests macOS.xctest */,
 			);
@@ -170,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D252F24825A5450400388E26 /* Regular Bessel Function SwiftUI (iOS) */ = {
+		D252F24825A5450400388E26 /* Phys440HW2 (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D252F27325A5450400388E26 /* Build configuration list for PBXNativeTarget "Regular Bessel Function SwiftUI (iOS)" */;
+			buildConfigurationList = D252F27325A5450400388E26 /* Build configuration list for PBXNativeTarget "Phys440HW2 (iOS)" */;
 			buildPhases = (
 				D252F24525A5450400388E26 /* Sources */,
 				D252F24625A5450400388E26 /* Frameworks */,
@@ -182,14 +260,17 @@
 			);
 			dependencies = (
 			);
-			name = "Regular Bessel Function SwiftUI (iOS)";
+			name = "Phys440HW2 (iOS)";
+			packageProductDependencies = (
+				5E10A4E427ADA0CD0076F812 /* CorePlot */,
+			);
 			productName = "Regular Bessel Function SwiftUI (iOS)";
-			productReference = D252F24925A5450400388E26 /* Regular Bessel Function SwiftUI.app */;
+			productReference = D252F24925A5450400388E26 /* Phys440HW2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D252F25025A5450400388E26 /* Regular Bessel Function SwiftUI (macOS) */ = {
+		D252F25025A5450400388E26 /* Phys440HW2 (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D252F27625A5450400388E26 /* Build configuration list for PBXNativeTarget "Regular Bessel Function SwiftUI (macOS)" */;
+			buildConfigurationList = D252F27625A5450400388E26 /* Build configuration list for PBXNativeTarget "Phys440HW2 (macOS)" */;
 			buildPhases = (
 				D252F24D25A5450400388E26 /* Sources */,
 				D252F24E25A5450400388E26 /* Frameworks */,
@@ -199,9 +280,9 @@
 			);
 			dependencies = (
 			);
-			name = "Regular Bessel Function SwiftUI (macOS)";
+			name = "Phys440HW2 (macOS)";
 			productName = "Regular Bessel Function SwiftUI (macOS)";
-			productReference = D252F25125A5450400388E26 /* Regular Bessel Function SwiftUI.app */;
+			productReference = D252F25125A5450400388E26 /* Phys440HW2.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D252F25825A5450400388E26 /* Tests iOS */ = {
@@ -247,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					D252F24825A5450400388E26 = {
 						CreatedOnToolsVersion = 12.3;
@@ -265,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D252F24025A5450100388E26 /* Build configuration list for PBXProject "Regular Bessel Function SwiftUI" */;
+			buildConfigurationList = D252F24025A5450100388E26 /* Build configuration list for PBXProject "Phys440HW2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -274,17 +355,85 @@
 				Base,
 			);
 			mainGroup = D252F23C25A5450100388E26;
+			packageReferences = (
+				5E10A4E327ADA0CD0076F812 /* XCRemoteSwiftPackageReference "core-plot" */,
+			);
 			productRefGroup = D252F24A25A5450400388E26 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5E10A4C327AD991D0076F812 /* Products */;
+					ProjectRef = 5E10A4C227AD991D0076F812 /* CorePlot.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				D252F24825A5450400388E26 /* Regular Bessel Function SwiftUI (iOS) */,
-				D252F25025A5450400388E26 /* Regular Bessel Function SwiftUI (macOS) */,
+				D252F24825A5450400388E26 /* Phys440HW2 (iOS) */,
+				D252F25025A5450400388E26 /* Phys440HW2 (macOS) */,
 				D252F25825A5450400388E26 /* Tests iOS */,
 				D252F26325A5450400388E26 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5E10A4D327AD991D0076F812 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 5E10A4D227AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4D527AD991D0076F812 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 5E10A4D427AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4D727AD991D0076F812 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 5E10A4D627AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4D927AD991D0076F812 /* UnitTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests iOS.xctest";
+			remoteRef = 5E10A4D827AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4DB27AD991D0076F812 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = 5E10A4DA27AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4DD27AD991D0076F812 /* CorePlot-CocoaTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CorePlot-CocoaTouchTests.xctest";
+			remoteRef = 5E10A4DC27AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4DF27AD991D0076F812 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 5E10A4DE27AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E10A4E127AD991D0076F812 /* UnitTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests tvOS.xctest";
+			remoteRef = 5E10A4E027AD991D0076F812 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D252F24725A5450400388E26 /* Resources */ = {
@@ -324,10 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D252F28D25A5463200388E26 /* Bessel Functions.swift in Sources */,
 				D252F26D25A5450400388E26 /* ContentView.swift in Sources */,
+				5E10A42A27ACE94C0076F812 /* 2_1_1SubtractiveCancellation.swift in Sources */,
+				5E10A42827A467AA0076F812 /* 2_2BesselFunctions.swift in Sources */,
 				D252F26B25A5450400388E26 /* Regular_Bessel_Function_SwiftUIApp.swift in Sources */,
 				D252F28425A5457C00388E26 /* Operators.swift in Sources */,
+				5E10A42C27AD661F0076F812 /* 2_3SinApproximation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +486,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D252F28E25A5463200388E26 /* Bessel Functions.swift in Sources */,
 				D252F26E25A5450400388E26 /* ContentView.swift in Sources */,
 				D252F26C25A5450400388E26 /* Regular_Bessel_Function_SwiftUIApp.swift in Sources */,
 				D252F28525A5457C00388E26 /* Operators.swift in Sources */,
@@ -350,7 +500,6 @@
 				D252F25E25A5450400388E26 /* Tests_iOS.swift in Sources */,
 				D252F28625A5457C00388E26 /* Operators.swift in Sources */,
 				D252F2A125A5546C00388E26 /* ContentView.swift in Sources */,
-				D252F28F25A5463200388E26 /* Bessel Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +511,6 @@
 				D252F26925A5450400388E26 /* Tests_macOS.swift in Sources */,
 				D252F28725A5457C00388E26 /* Operators.swift in Sources */,
 				D252F2A625A5546C00388E26 /* ContentView.swift in Sources */,
-				D252F29025A5463200388E26 /* Bessel Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,12 +519,12 @@
 /* Begin PBXTargetDependency section */
 		D252F25B25A5450400388E26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D252F24825A5450400388E26 /* Regular Bessel Function SwiftUI (iOS) */;
+			target = D252F24825A5450400388E26 /* Phys440HW2 (iOS) */;
 			targetProxy = D252F25A25A5450400388E26 /* PBXContainerItemProxy */;
 		};
 		D252F26625A5450400388E26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D252F25025A5450400388E26 /* Regular Bessel Function SwiftUI (macOS) */;
+			target = D252F25025A5450400388E26 /* Phys440HW2 (macOS) */;
 			targetProxy = D252F26525A5450400388E26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -508,7 +656,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiiit.Regular-Bessel-Function-SwiftUI";
-				PRODUCT_NAME = "Regular Bessel Function SwiftUI";
+				PRODUCT_NAME = Phys440HW2;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,7 +678,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiiit.Regular-Bessel-Function-SwiftUI";
-				PRODUCT_NAME = "Regular Bessel Function SwiftUI";
+				PRODUCT_NAME = Phys440HW2;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,6 +692,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V59RVGUYZD;
@@ -556,7 +705,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiiit.Regular-Bessel-Function-SwiftUI";
-				PRODUCT_NAME = "Regular Bessel Function SwiftUI";
+				PRODUCT_NAME = Phys440HW2;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -568,6 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V59RVGUYZD;
@@ -580,7 +730,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiiit.Regular-Bessel-Function-SwiftUI";
-				PRODUCT_NAME = "Regular Bessel Function SwiftUI";
+				PRODUCT_NAME = Phys440HW2;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -678,7 +828,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D252F24025A5450100388E26 /* Build configuration list for PBXProject "Regular Bessel Function SwiftUI" */ = {
+		D252F24025A5450100388E26 /* Build configuration list for PBXProject "Phys440HW2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D252F27125A5450400388E26 /* Debug */,
@@ -687,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D252F27325A5450400388E26 /* Build configuration list for PBXNativeTarget "Regular Bessel Function SwiftUI (iOS)" */ = {
+		D252F27325A5450400388E26 /* Build configuration list for PBXNativeTarget "Phys440HW2 (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D252F27425A5450400388E26 /* Debug */,
@@ -696,7 +846,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D252F27625A5450400388E26 /* Build configuration list for PBXNativeTarget "Regular Bessel Function SwiftUI (macOS)" */ = {
+		D252F27625A5450400388E26 /* Build configuration list for PBXNativeTarget "Phys440HW2 (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D252F27725A5450400388E26 /* Debug */,
@@ -724,6 +874,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E10A4E327ADA0CD0076F812 /* XCRemoteSwiftPackageReference "core-plot" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/core-plot/core-plot";
+			requirement = {
+				branch = "release-2.4";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E10A4E427ADA0CD0076F812 /* CorePlot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E10A4E327ADA0CD0076F812 /* XCRemoteSwiftPackageReference "core-plot" */;
+			productName = CorePlot;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D252F23D25A5450100388E26 /* Project object */;
 }
